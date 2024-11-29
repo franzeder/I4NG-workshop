@@ -1,0 +1,42 @@
+---
+title: "Final Report"
+author: "Franz Eder"
+format: html
+bibliography: "lit_os.bib"
+---
+
+## Introduction
+
+My first sentence.
+
+```{r}
+#| label: dataset
+#| echo: TRUE
+#| eval: TRUE
+
+pacman::p_load(tidyverse)
+
+df <- starwars
+head(df)
+```
+
+See @Breznau2022[p. 22]
+
+```{r}
+#| label: plot
+#| fig-cap: "How big and heavy starwars characteters are?"
+
+df |> filter(mass < 500) |> 
+  ggplot(aes(height, mass, color = gender)) +
+  geom_point() +
+  theme_minimal()
+```
+
+![](../plots/plot_dots_homosexuality-final.png){#fig-homosexuality width="50%"}
+
+As @fig-homosexuality shows
+
+## Bibliography
+
+::: {.ref}
+:::

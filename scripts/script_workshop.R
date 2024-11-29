@@ -10,6 +10,7 @@ pacman::p_load(MASS, # statistical modeling and machine learning
          showtext, # using non-standard fonts
          Cairo, # embedding fonts into graphs
          sjlabelled, # using SPSS/Stata data
+         ggtext, # for coloring title in plots
          dataverse # downloading dataset
          )
 
@@ -79,7 +80,7 @@ png(filename = "./plots/plot_line_homosexuality.png",
     units = "in", 
     res = 300,
     bg = "#ffffff", 
-    type = "cairo-png"
+    type = "cairo-png" # embed the font in the file
 )
 
 df |> filter(homosexuality == 10 | homosexuality == 1) |> # only take extremes

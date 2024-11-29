@@ -18,6 +18,7 @@ pacman::p_load(MASS, # statistical modeling and machine learning
 # 010. loading and manipulating data----
 
 ## Specifying the API Token from AUSSDA
+# see https://data.aussda.at/dataverseuser.xhtml?selectTab=apiTokenTab
 Sys.setenv("DATAVERSE_KEY" = "84ea49a4-7d80-4e7f-8f41-1fc073e74055")
 
 df_evs <-
